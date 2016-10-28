@@ -14,6 +14,14 @@
 
 ---
 
+#### hosts
+
+sudo vi /etc/hosts
+
+127.0.0.1    local-www.study.com
+
+---
+
 #### nginx 설정
 
 nginx compile해서 설치하셔도되고, 아니면
