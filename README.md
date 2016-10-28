@@ -14,9 +14,22 @@
 
 ---
 
-#### nginx.conf
+#### nginx 설정
+
+nginx compile해서 설치하셔도되고, 아니면
+
+```
+brew update
+
+brew install nginx
+```
+brew로 설치했을 경우 아래 디렉토리에 위치한다.
+
+/usr/local/etc/nginx/nginx.conf
 
 아래 {project_folder}를 본인의 디렉토리로 변경.
+
+nginx.conf
 
 ```
 worker_processes  1;
