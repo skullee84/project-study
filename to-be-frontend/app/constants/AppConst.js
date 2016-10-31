@@ -1,5 +1,5 @@
 const AppConst = {
-  NAME: 'study'
+  NAME: 'Study'
 };
 
 export default AppConst;
