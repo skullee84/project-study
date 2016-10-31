@@ -34,6 +34,16 @@ export default class Home extends React.Component {
     UserActions.getUsers();
   }
 
+  _eventButton = () => {
+    let jsonStr = JSON.stringify({
+      name: this.refs.name.value,
+      phone: this.refs.phone.value
+    });
+    
+    console.log(jsonStr);
+    alert(jsonStr);
+  }
+
   render() {
     let users = this.state.users;
     let data = users.map((user, index) => {
@@ -44,6 +54,13 @@ export default class Home extends React.Component {
 
     return (
       <div className="row" style={style}>
+        <div className="col-lg-12">
+          <input type="text" ref="name" placeholder="text.." />
+          <input type="number" ref="phone" placeholder="number.." />
+          <button className="btn btn-sm btn-outline-secondary" onClick={this._eventButton}>
+            button
+          </button>
+        </div>
         <div className="col-lg-12">
           <h3 className="jumbo">Hello React..</h3>
           <button className="btn btn-sm btn-outline-secondary" onClick={this._getData}>
