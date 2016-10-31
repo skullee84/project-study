@@ -66,7 +66,7 @@ http {
     charset utf-8;
 
     location / {
-        root  {project_folder}/to-do-frontend/dist;
+        root  {project_folder}/to-be-frontend/dist;
         index  index.html index.htm;
     }
 
