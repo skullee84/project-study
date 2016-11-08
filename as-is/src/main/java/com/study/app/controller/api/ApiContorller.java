@@ -1,7 +1,6 @@
 package com.study.app.controller.api;
 
 import com.study.app.service.AppService;
-import org.springframework.http.HttpMethod;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -23,4 +22,5 @@ public class ApiContorller {
     public Object data() {
         return appService.getSampleData();
     }
+
 }
