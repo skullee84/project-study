@@ -11,7 +11,7 @@ import org.springframework.web.servlet.mvc.WebContentInterceptor;
 /**
  * Created by dominic.lee on 2016. 10. 26..
  */
-// web.xml
+// servlet-context
 @Configuration
 @EnableWebMvc
 @ComponentScan(basePackages = {"com.study.app.controller"})

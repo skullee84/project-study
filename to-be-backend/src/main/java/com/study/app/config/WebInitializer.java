@@ -12,6 +12,7 @@ import javax.servlet.Filter;
 /**
  * Created by dominic.lee on 2016. 10. 26..
  */
+// web.xml
 @Configuration
 public class WebInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
 
