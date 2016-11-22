@@ -1,5 +1,6 @@
 import React  from 'react';
-import toastr from 'toastr';
+import toastr from 'libs/toastr';
+import display from 'libs/display';
 
 export default class View extends React.Component {
   constructor(props) {
@@ -19,6 +20,7 @@ export default class View extends React.Component {
   render() {
     return (
       <div className="row c-m-t">
+        {display('phone', '01012341111')}
         <button className="btn btn-sm btn-outline-secondary" onClick={this._click}>
           click
         </button>
