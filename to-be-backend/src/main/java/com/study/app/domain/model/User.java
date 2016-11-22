@@ -1,6 +1,5 @@
 package com.study.app.domain.model;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import lombok.ToString;
@@ -20,7 +19,8 @@ public class User implements Serializable {
 
     private Long id;
     private String name;
-    @JsonIgnore private String password;
+    //@JsonIgnore
+    private String password;
 
     public User(Long id, String name) {
         this.id = id;

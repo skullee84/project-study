@@ -44,10 +44,9 @@ export default class Home extends React.Component {
   }
 
   render() {
-    let users = this.state.users;
-    let data = users.map((user, index) => {
+    let data = this.state.users.map((user, index) => {
       return (
-        <li key={index}>{user.id}, {user.name}</li>
+        <li key={index}>{JSON.stringify(user)}</li>
       )
     });
 
@@ -66,7 +65,6 @@ export default class Home extends React.Component {
         </div>
         <hr />
         <div className="col-lg-12">
-          <h3 className="jumbo">Hello React..</h3>
           <button className="btn btn-sm btn-outline-secondary" onClick={this._getData}>
             getData
           </button>
