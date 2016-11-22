@@ -18,6 +18,15 @@ class UserStore {
     this.users = [];
   }
 
+  setJsonStr(jsonStr) {
+    this.jsonStr = jsonStr;
+  }
+
+  clear() {
+    this.users = [];
+    this.jsonStr = '';
+  }
+
 }
 
 export default alt.createStore(UserStore, 'UserStore');

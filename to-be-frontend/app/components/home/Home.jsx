@@ -34,19 +34,26 @@ export default class Home extends React.Component {
     UserActions.getUsers();
   }
 
+  _clear = () => {
+    this.refs.name.value = '';
+    this.refs.phone.value = '';
+    
+    UserActions.clear();
+  }
+
   _eventButton = () => {
     let jsonStr = JSON.stringify({
       name: this.refs.name.value,
       phone: this.refs.phone.value
     });
 
-    this.setState({ jsonStr });
+    UserActions.setJsonStr(jsonStr);
   }
 
   render() {
     let data = this.state.users.map((user, index) => {
       return (
-        <li key={index}>{JSON.stringify(user)}</li>
+        <pre key={index}>{JSON.stringify(user)}</pre>
       )
     });
 
@@ -68,7 +75,10 @@ export default class Home extends React.Component {
           <button className="btn btn-sm btn-outline-secondary" onClick={this._getData}>
             getData
           </button>
-          <ul>{data}</ul>
+          <button className="btn btn-sm btn-outline-danger" onClick={this._clear}>
+            clear
+          </button>
+          <div>{data}</div>
         </div>
       </div>
     );

@@ -24,6 +24,16 @@ class UserActions {
     return response;
   }
 
+  setJsonStr(jsonStr) {
+    return jsonStr;
+  }
+
+  clear() {
+    return (dispatch) => {
+      dispatch();
+    }
+  }
+
 }
 
 export default alt.createActions(UserActions);
