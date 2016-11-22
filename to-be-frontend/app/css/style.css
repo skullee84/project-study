@@ -3,3 +3,7 @@
 @import '../../node_modules/font-awesome/css/font-awesome.min.css';
 
 @import 'animate.min.css';
+
+.c-m-t {
+  margin-top: 60px
+}

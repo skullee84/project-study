@@ -4,10 +4,6 @@ import moment from 'moment';
 import UserActions from 'actions/UserActions';
 import UserStore   from 'stores/UserStore';
 
-const style = {
-  'marginTop': '54px'
-};
-
 export default class Home extends React.Component {
   constructor(props) {
     super(props);
@@ -20,6 +16,7 @@ export default class Home extends React.Component {
   }
 
   componentDidMount() {
+    this._clear();
   }
 
   componentWillUnmount() {
@@ -37,7 +34,7 @@ export default class Home extends React.Component {
   _clear = () => {
     this.refs.name.value = '';
     this.refs.phone.value = '';
-    
+
     UserActions.clear();
   }
 
@@ -58,7 +55,7 @@ export default class Home extends React.Component {
     });
 
     return (
-      <div className="row" style={style}>
+      <div className="row c-m-t">
         <div className="col-lg-12">
           <input type="text" ref="name" placeholder="text.." />
           <input type="number" ref="phone" placeholder="number.." />

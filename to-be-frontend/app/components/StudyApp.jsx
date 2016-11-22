@@ -12,7 +12,12 @@ export default class StudyApp extends React.Component {
     return (
       <div>
         <nav className="navbar navbar-fixed-top navbar-dark bg-inverse">
-          <Link className="navbar-brand" href="#">{appConst.NAME}</Link>
+          <Link className="navbar-brand" to="/home">{appConst.NAME}</Link>
+          <ul className="nav navbar-nav">
+            <li className="nav-item active">
+              <Link className="nav-link" to="/view">view <span className="sr-only">(current)</span></Link>
+            </li>
+          </ul>
         </nav>
 
         <div className="container-fluid">
