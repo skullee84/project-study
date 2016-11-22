@@ -5,6 +5,7 @@ import UserActions from 'actions/UserActions';
 class UserStore {
   constructor() {
     this.users = [];
+    this.jsonStr = '';
 
     this.bindActions(UserActions);
   }

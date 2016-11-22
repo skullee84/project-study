@@ -39,9 +39,8 @@ export default class Home extends React.Component {
       name: this.refs.name.value,
       phone: this.refs.phone.value
     });
-    
-    console.log(jsonStr);
-    alert(jsonStr);
+
+    this.setState({ jsonStr });
   }
 
   render() {
@@ -61,6 +60,11 @@ export default class Home extends React.Component {
             button
           </button>
         </div>
+        <hr />
+        <div className="col-lg-12">
+          <pre>{this.state.jsonStr}</pre>
+        </div>
+        <hr />
         <div className="col-lg-12">
           <h3 className="jumbo">Hello React..</h3>
           <button className="btn btn-sm btn-outline-secondary" onClick={this._getData}>
