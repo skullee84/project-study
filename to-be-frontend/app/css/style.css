@@ -1,6 +1,7 @@
 /*! vendor */
 @import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 @import '../../node_modules/font-awesome/css/font-awesome.min.css';
+@import '../../node_modules/toastr/build/toastr.css';
 
 @import 'animate.min.css';
 
