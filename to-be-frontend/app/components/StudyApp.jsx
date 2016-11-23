@@ -15,7 +15,7 @@ export default class StudyApp extends React.Component {
           <Link className="navbar-brand" to="/home">{appConst.NAME}</Link>
           <ul className="nav navbar-nav">
             <li className="nav-item">
-              <Link className="nav-link" to="/view">view <span className="sr-only">(current)</span></Link>
+              <Link className="nav-link" to="/view">toastr</Link>
             </li>
           </ul>
         </nav>
