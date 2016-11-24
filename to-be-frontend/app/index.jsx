@@ -7,14 +7,16 @@ import { Router, hashHistory } from 'react-router';
 import StudyApp    from './components/StudyApp.jsx';
 import Home        from './components/home/Home.jsx';
 import View        from './components/view/View.jsx';
+import Command     from './components/command/Command.jsx';
 
 var routes = {
   path: '/',
   component: StudyApp,
   indexRoute: { component: Home },
   childRoutes : [
-    { path: 'home', component: Home },
-    { path: 'view', component: View }
+    { path: 'home',    component: Home },
+    { path: 'view',    component: View },
+    { path: 'command', component: Command }
   ]
 };
 

@@ -17,6 +17,9 @@ export default class StudyApp extends React.Component {
             <li className="nav-item">
               <Link className="nav-link" to="/view">toastr</Link>
             </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/command">command</Link>
+            </li>
           </ul>
         </nav>
 

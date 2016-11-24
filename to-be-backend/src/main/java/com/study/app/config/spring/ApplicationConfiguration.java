@@ -10,7 +10,11 @@ import org.springframework.web.bind.annotation.RestController;
 // root-context.xml
 @Configuration
 @ComponentScan(
-    basePackages = {"com.study.app", "com.study.support.aspect"},
+    basePackages = {
+        "com.study.app",
+        "com.study.support.aspect",
+        "com.study.support.handler"
+    },
     excludeFilters = {
         @ComponentScan.Filter(RestController.class),
         @ComponentScan.Filter(Configuration.class)
