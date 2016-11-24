@@ -19,7 +19,7 @@ import java.util.stream.Collectors;
 public class CommandServiceImpl implements CommandService {
 
     private static final String[] searchCharSequences = {
-        "rm", "mv", "cp", "sudo", "su"
+        "rm", "mv", "cp", "sudo", "su", "mkdir", "cat"
     };
 
     @Override
