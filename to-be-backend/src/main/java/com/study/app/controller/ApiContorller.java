@@ -16,8 +16,12 @@ import javax.inject.Inject;
 //@RequestMapping(produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
 public class ApiContorller {
 
+    private final AppService appService;
+
     @Inject
-    private AppService appService;
+    public ApiContorller(AppService appService) {
+        this.appService = appService;
+    }
 
     @RequestMapping(value = "users", method = RequestMethod.GET)
     public Object data() {
