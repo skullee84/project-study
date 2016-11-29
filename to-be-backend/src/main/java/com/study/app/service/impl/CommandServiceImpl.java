@@ -6,6 +6,7 @@ import org.apache.commons.lang3.StringUtils;
 import org.springframework.stereotype.Component;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.nio.file.Paths;
@@ -26,9 +27,10 @@ public class CommandServiceImpl implements CommandService {
     public List<String> run(String command) {
         confirmCommand(command);
         try {
-            Process proc = Runtime.getRuntime().exec(command, null, Paths.get(System.getProperty("user.home")).toFile());
+            File file = Paths.get(System.getProperty("user.home")).toFile();
+            Process process = Runtime.getRuntime().exec(command, null, file);
 
-            try (BufferedReader buffer = new BufferedReader(new InputStreamReader(proc.getInputStream()))) {
+            try (BufferedReader buffer = new BufferedReader(new InputStreamReader(process.getInputStream()))) {
                 return buffer.lines().collect(Collectors.toList());
             }
         } catch (IOException e) {
